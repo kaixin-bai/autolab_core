@@ -87,7 +87,7 @@ def imresize(image, size, interp="nearest"):
         raise ValueError('Invalid type for size "{}".'.format(type(size)))
 
     return skt.resize(
-        image.astype(np.float),
+        image.astype(float),
         output_shape,
         order=skt_interp_map[interp],
         anti_aliasing=False,
